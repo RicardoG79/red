@@ -8,7 +8,7 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #faefef;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
@@ -30,16 +30,31 @@ header .logo {
     position: absolute;
     left: 20px;
     top: 20px;
-    height: 60px; /* Ajusta el tamaño del logo según sea necesario */
+    height: 40px; /* Ajusta el tamaño del logo según sea necesario */
 }
+
 
 header h1 {
     margin: 0;
     font-size: 24px;
+    font-family: "Libre Baskerville", serif;
 }
 
 header p {
     margin: 5px 0;
+    font-size: 12px;
+    font-family: "Edu TAS Beginner", cursive;
+}
+header h2{
+    margin: 0;
+    font-size: 18px; 
+    font-family: "Libre Baskerville", serif;
+}
+header p:hover{
+    color: #032257;
+}
+header h2:hover{
+    color: #032257;
 }
 
 .info {
@@ -49,7 +64,7 @@ header p {
 }
 
 .info-block {
-    background-color: #ffffff;
+    background-color: #f8c79f;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -68,12 +83,14 @@ header p {
 .links {
     text-align: center;
     display: grid;
-    gap: 10px;
+    gap: 1px;
 }
 
 .link {
     display: block;
     width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
     padding: 10px;
     background-color: #3498db;
     color: white;
@@ -85,6 +102,21 @@ header p {
 .link:hover {
     background-color: #2980b9;
 }
+footer{
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    font-family: "Edu TAS Beginner", cursive;
+    font-size: 8px;
+}
+footer .logo{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 30px; /* Ajusta el tamaño del logo según sea necesario */
+    }
 
 /* Media Queries */
 @media (max-width: 768px) {
