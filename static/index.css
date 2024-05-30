@@ -27,12 +27,14 @@ header {
 }
 
 header .logo {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    height: 40px; /* Ajusta el tamaño del logo según sea necesario */
+    grid-row: span 2;
+    height: 20px; /* Ajusta el tamaño del logo según sea necesario */
 }
-
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 header h1 {
     margin: 0;
@@ -51,10 +53,10 @@ header h2{
     font-family: "Libre Baskerville", serif;
 }
 header p:hover{
-    color: #032257;
+    color: #f0fb28;
 }
 header h2:hover{
-    color: #032257;
+    color: #f0fb28;
 }
 
 .info {
@@ -112,10 +114,8 @@ footer{
     font-size: 8px;
 }
 footer .logo{
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    height: 30px; /* Ajusta el tamaño del logo según sea necesario */
+    grid-row: span 2;
+    height: 20px; /* Ajusta el tamaño del logo según sea necesario */
     }
 
 /* Media Queries */
@@ -129,13 +129,23 @@ footer .logo{
         grid-template-columns: 1fr;
     }
 
-    .header .logo {
-        position: static;
-        display: block;
-        margin: 0 auto 20px auto;
+    header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        text-align: center;
+    }
+
+    header .logo {
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: center;
     }
 
     .header h1 {
         font-size: 20px;
     }
+    footer .logo{
+        grid-row: span 2;
+        height: 20px; /* Ajusta el tamaño del logo según sea necesario */
+        }
 }
